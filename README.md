@@ -2,7 +2,7 @@
 <p align="center">
     <a href="https://www.rust-lang.org/" alt="Made In">
         <img src="https://img.shields.io/badge/SCRAPED WITH-Rust-red?style=for-the-badge&logo=rust&logoColor=red" /></a>
-    <a href="https://github.com/yxl-prz/YJDict/releases/download/dictionary/yjdict.json" alt="Download">
+    <a href="https://github.com/yxl-prz/YJDict/releases/latest/download/yjdict.json" alt="Download">
         <img src="https://img.shields.io/badge/DOWNLOAD-RAW-yellow?style=for-the-badge" /></a>
     <a href="https://github.com/yxl-prz/YJDict/graphs/contributors" alt="Version">
         <img src="https://img.shields.io/github/contributors/yxl-prz/YJDict?style=for-the-badge" /></a>

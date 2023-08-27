@@ -33,7 +33,7 @@ type YJDict struct {
 	Expression  string                `json:"expression"`
 	Reading     string                `json:"reading"`
 	Definitions map[string]([]string) `json:"definitions"`
-	Pitch       *YJDictPitch          `json:"pitch"`
+	Pitch       *YJDictPitch          `json:"pitches"`
 }
 
 type YJDictPitch struct {

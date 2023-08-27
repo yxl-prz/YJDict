@@ -12,49 +12,28 @@
 ## [Rust](#rs-rust) | [Go](#rust--go)
 ## `.rs`: **Rust**
 ```rs
-struct YJDict {
-    id: i32,
-    expression: String,
-    reading: String,
-    definitions: YJDictDefinitions,
-    pitch: Option<Vec<YJDictPitch>>,
+pub struct Item {
+    pub expression: String,
+    pub reading: String,
+    pub definitions: HashMap<String, Vec<String>>,
+    pub pitches: Option<Vec<ItemPitch>>,
+    pub frequency: Option<u32>,
 }
 
-struct YJDictDefinitions {
-    en: Vec<String>,
-    es: Vec<String>,
-    fr: Vec<String>,
-    nl: Vec<String>,
-    hu: Vec<String>,
-    ru: Vec<String>,
-    sv: Vec<String>,
-    de: Vec<String>,
-}
-
-struct YJDictPitch {
-    postion: i8,
+pub struct ItemPitch {
+    drop: i16,
     notation: Vec<char>,
 }
+
 ```
 ## `.go`: **Go**
 ```go
 type YJDict struct {
-	ID          int32             `json:"id"`
-	Expression  string            `json:"expression"`
-	Reading     string            `json:"reading"`
-	Definitions YJDictDefinitions `json:"definitions"`
-	Pitch       *YJDictPitch      `json:"pitch"`
-}
-
-type YJDictDefinitions struct {
-	EN []string `json:"en"`
-	ES []string `json:"es"`
-	FR []string `json:"fr"`
-	NL []string `json:"nl"`
-	HU []string `json:"hu"`
-	RU []string `json:"ru"`
-	SV []string `json:"sv"`
-	DE []string `json:"de"`
+	ID          int32                 `json:"id"`
+	Expression  string                `json:"expression"`
+	Reading     string                `json:"reading"`
+	Definitions map[string]([]string) `json:"definitions"`
+	Pitch       *YJDictPitch          `json:"pitch"`
 }
 
 type YJDictPitch struct {
@@ -63,6 +42,18 @@ type YJDictPitch struct {
 }
 ```
 
+## `.sql`: **SQL**
+```sql
+CREATE TABLE Expressions(
+    expression TEXT NOT NULL,
+    reading TEXT DEFAULT NULL,
+    definitions JSONB NOT NULL,
+    pitches JSONB,
+    frequency INTEGER DEFAULT NULL
+);
+```
+
 # Credits
 - ⭐ **JMDict** [[link](https://www.edrdg.org/jmdict/edict_doc.html)]: Majority of the definitions were taken from different variations of the **JMDict** dictionary.
 - ⭐ **Kanjium** [[link](https://github.com/mifunetoshiro/kanjium)]: The pitch accent information was taken from **Kanjium**.
+- ⭐ **Innocent Corpus** [[link](https://web.archive.org/web/20190309073023/https://forum.koohii.com/thread-9459.html#pid168613)]: The frequency of the expressions were taken from **Innocent Corpus**.

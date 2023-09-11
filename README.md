@@ -13,6 +13,11 @@
         <img src="https://img.shields.io/badge/DOWNLOAD-SENTENCES-purple?style=for-the-badge" />
 </p>
 
+<p align="center">
+    <img src="./word-chart.svg" alt="words" height="200px">
+    <img src="./sentence-chart.svg" alt="sentences" height="200px">
+</p>
+
 # Structures
 ## [Rust](#rs-rust) | [Go](#rust--go)
 ## `.rs`: **Rust**
@@ -84,5 +89,6 @@ type SentenceAudio struct {
 - ⭐ **JMDict** [[link](https://www.edrdg.org/jmdict/edict_doc.html)]: Majority of the definitions were taken from different variations of the **JMDict** dictionary.
 - ⭐ **Kanjium** [[link](https://github.com/mifunetoshiro/kanjium)]: The pitch accent information was taken from **Kanjium**.
 - ⭐ **Innocent Corpus** [[link](https://web.archive.org/web/20190309073023/https://forum.koohii.com/thread-9459.html#pid168613)]: The frequency of the expressions were taken from **Innocent Corpus**.
+- ⭐ **新明解**: The Japanese definitions were taking from **新明解**.
 ## Sentences
 - ⭐ **Tatoeba** [[link](https://tatoeba.org/en/downloads)]: All of the sentences, audio information, and transcript infomation was taken from **Tatoeba**.
